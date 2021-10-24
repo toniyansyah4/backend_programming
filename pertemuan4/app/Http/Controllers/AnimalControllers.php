@@ -8,25 +8,21 @@ class AnimalControllers extends Controller
 {
     public function index()
     {
-        echo "Menampilkan data animals";
+        return "Menampilkan data animals";
     }
 
     public function store(Request $request)
     {
-        echo "Nama hewan: $request->nama";
-        echo "<br>";
-        echo "Menambahkan hewan baru";
+        return "Nama hewan: $request->nama" . '<br>' . "Menambahkan hewan baru";
     }
 
     public function update(Request $request, $id)
     {
-        echo "Nama hewan: $request->nama";
-        echo "<br>";
-        echo "Mengupdate data hewan id $id";
+        return "Nama hewan: $request->nama" . "<br>" . "Mengupdate data hewan id $id";
     }
 
     public function destroy($id)
     {
-        echo "Menghapus data hewan id $id";
+        return "Menghapus data hewan id $id";
     }
 }

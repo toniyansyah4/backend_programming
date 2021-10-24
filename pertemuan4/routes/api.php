@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalControllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,13 +20,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 # method get
-Route::get('/animals', [AnimalController::class, 'index']);
+Route::get('/animals', [AnimalControllers::class, 'index']);
 
 # method post
-Route::post('/animals', [AnimalController::class, 'store']);
+Route::post('/animals', [AnimalControllers::class, 'store']);
 
 # method put
-Route::put('/animals/{id}', [AnimalController::class, 'update']);
+Route::put('/animals/{id}', [AnimalControllers::class, 'update']);
 
 # method delete
-Route::delete('/animals/{id}', [AnimalController::class, 'destroy']);
+Route::delete('/animals/{id}', [AnimalControllers::class, 'destroy']);
